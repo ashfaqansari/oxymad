@@ -7,7 +7,9 @@ const db = require("./config/database");
 console.log(db);
 const app = express();
 // const connect = require("./config/database");
-
+app.get("/", (req, res)=>{
+    res.send({success : true, message : "Successfuly Deployed !"})
+})
 app.use(express.json({ extended : true  }))
 app.use(morgan('combined'))
 app.use(cors())
