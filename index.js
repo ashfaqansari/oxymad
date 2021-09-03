@@ -15,7 +15,7 @@ app.use(morgan('combined'))
 app.use(cors())
 app.use("/v1" , mainRoute)
 
-const port = 9000;
+const port = process.env.port ? process.env.port : 9000;
 app.listen(port, (err) => {
     if(err)
     {
