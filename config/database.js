@@ -1,7 +1,8 @@
 const mongoose = require("mongoose");
-// mongodb+srv://ashfaq123:ashfaq123@cluster0.sno6u.mongodb.net/Oxymad?retryWrites=true&w=majority
+
  const atlasUri = 'mongodb+srv://ashfaq123:ashfaq123@cluster0.sno6u.mongodb.net/testDb'
  const localUri = 'mongodb://localhost:27017/oxymad'
+ 
 module.exports = mongoose.connect(atlasUri , {})
   .then((result)=>{
     console.log("db connected");
